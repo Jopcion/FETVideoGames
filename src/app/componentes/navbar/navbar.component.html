@@ -1,0 +1,52 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <img style="max-width: 10%; width: 80px; height: 50px" class="logo" src="assets/logoF.PNG">
+
+
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">FETVideoGames</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#"><img src="assets/home.png" height ="40" width="40" ></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/videojuegos"><img src="assets/games.png" height ="40" width="40" ></a>
+          </li>
+          d-flex justify-content-between
+          d-flex justify-content-between
+          d-flex justify-content-between
+          <li class="nav-item">
+            <a class="nav-link disabled"><img src="assets/uno.png" height ="50" width="50" ></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled"><img src="assets/dos.png" height ="50" width="50" ></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled"><img src="assets/tres.png" height ="50" width="50" ></a>
+          </li>
+        </ul>
+        <form class="from-inline">
+          <input
+            class="form-control"
+            type="search"
+            placeholder="Buscar videojuego"
+            (keyup.enter)="buscarVideojuego(buscarTexto.value)"
+            #buscarTexto
+          />
+
+        </form>
+        <button (click)="buscarVideojuego(buscarTexto.value)" class="btn btn-outline-success" type="submit">Buscar</button>
+      </div>
+    </div>
+  </nav>

@@ -1,0 +1,25 @@
+
+<h1 style = "font-family:courier,arial,helvética;">
+  Los mejores juegos en <small>FET VideoGames</small>
+</h1>
+
+<div style="max-width: 80%; width: 900px; height: 450px" class="card-columns"  >
+  <div class="card animated fadeIn fast " *ngFor="let videojuego
+   of videojuego; let i = index">
+    <img class="card-img-top" [src]= "videojuego.img" [alt]="videojuego.nombre ">
+    <div class="card-body">
+      <h4 class="card-title">{{videojuego.nombre}}</h4>
+      <p class="card-text">{{ videojuego.descripcion }}</p>
+      <p class="card-text">{{ videojuego.lanzamiento }}</p>
+      <p class="card-text"><small class="text-muted">{{ videojuego.consola }}</small> </p>
+
+      <button style="max-width: 100%; width: 1600px; height: 60px"(click)="verVideoJuego(i)" type="button" class="btn btn-outline-primary btn-block" >ver mas</button>
+<br>
+
+    </div>
+
+
+  </div>
+
+</div>
+
