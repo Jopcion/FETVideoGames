@@ -1,0 +1,32 @@
+
+
+  <div class="row" *ngIf="super.length == 0 ">
+    <div class="col-md-12">
+      <div class="alert alert-danger" role="alert">
+        No existen resultados con el <a class="alert-link">{{termino}}</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4 d-flex aling-items-strech" *ngFor="let superheroe of super; let i = index">
+        <div class="card">
+          <img class="card-img-top" [src]="superheroe.img" [alt]="superheroe.nombre">
+          <div class="card-body">
+            <h5 class="card-title">{{superheroe.nombre}}</h5>
+            <p class="card-text">{{superheroe.alias}}</p>
+            <p class="card-text">{{superheroe.especie}}</p>
+            <p class="card-text">{{superheroe.nacionalidad}}</p>
+            <p class="card-text">{{superheroe.fechaNacimiento}}</p>
+            <p class="card-text">{{superheroe.frase}}</p>
+
+
+            <button type="button" (click)="verSuper(i)" class="btn btn-danger"
+                    data-mdb-ripple-color="dark">
+              VER MAS</button>
+          </div>
+        </div>
+      </div>
+  </div>
+  </div>

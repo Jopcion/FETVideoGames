@@ -1,0 +1,18 @@
+<h1> <small>VOTACIONES</small></h1>
+<div class="container">
+  <div class="row">
+    <div class="col-lg-4 d-flex aling-items-strech" *ngFor="let superheroe of SuperOrdenados; let i = index">
+      <div class="card">
+        <h1 style="color: blue" *ngIf="i==0"> <small>Like </small></h1>
+        <h1 style="color: red" *ngIf="i==1"> <small>Dislike </small></h1>
+        <img class="card-img-top" [src]="superheroe.img" [alt]="superheroe.alias">
+        <div class="card-body">
+          <h5 class="card-title">{{superheroe.nombre}}({{superheroe.alias}})</h5>
+          <p class="card-text"><small class="text-muted"><img src="assets/img/likes.gif" height ="70" width="70" />{{superheroe.like}}</small></p>
+          <p class="card-text"><small class="text-muted"><img src="assets/img/dislike.gif" height ="70" width="70" /> {{superheroe.dislike}}</small></p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

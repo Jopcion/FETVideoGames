@@ -1,0 +1,16 @@
+
+<h1>{{super.nombre}} <small>({{super.alias}})</small></h1>
+<div class="row animated fadeIn fast">
+  <div class="col-md-4">
+    <img class="img-fluid" [src]="super.img">
+    <br><br>
+    <a [routerLink]="['/superheroe']" class="btn btn-outline-danger btn-block">Regresar</a>
+  </div>
+  <div class="col-md-8">
+    <h3>{{super.nombre}}</h3>
+    <hr>
+    <p>
+      {{super.frase}}
+    </p>
+   </div>
+</div>

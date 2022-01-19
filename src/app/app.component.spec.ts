@@ -16,16 +16,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'FETVideoGames'`, () => {
+  it(`should have as title 'Avenger'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('FETVideoGames');
+    expect(app.title).toEqual('Avenger');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('FETVideoGames app is running!');
+    expect(compiled.querySelector('.content span')?.textContent).toContain('Avenger app is running!');
   });
 });

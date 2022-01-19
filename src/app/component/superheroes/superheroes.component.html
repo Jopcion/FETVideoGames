@@ -1,0 +1,28 @@
+<h1>Los Personajes en accion de <small>Avenger</small></h1>
+<div class="container">
+  <div style="max-width: 80%; width: 900px; height: 450px" class="card-columns">
+    <div class="card animated fadeIn fast" *ngFor="let superheroe of super; let i = index">
+      <div class="card mt-5">
+        <img class="card-img-top" [src]="superheroe.img" [alt]="superheroe.nombre">
+        <div class="card-body">
+          <h5 class="card-title">{{superheroe.nombre}}</h5>
+          <p class="card-text">{{superheroe.alias}}</p>
+          <p class="card-text">{{superheroe.especie}}</p>
+          <p class="card-text">{{superheroe.nacionalidad}}</p>
+          <p class="card-text">{{superheroe.fechaNacimiento}}</p>
+          <p class="card-text">{{superheroe.frase}}</p>
+
+          <div class="row" >
+             <h3  align="center" > <small class="text-muted">{{superheroe.like}}</small></h3>
+            <button style="max-width: 100%; width: 1600px; height: 60px" type="button" (click)="setLike(i)" class="btn btn-primary"
+                    data-mdb-ripple-color="dark"> <img src="assets/img/likes.gif" height ="30" width="30" /></button>
+            <h3  align="center" > <small class="text-muted">{{superheroe.dislike}}</small></h3>
+           <button type="button" style="max-width: 100%; width: 1600px; height: 60px" (click)="setDisLike(i)" class="btn btn-danger"
+                    data-mdb-ripple-color="dark">
+              <img src="assets/img/dislike.gif" height ="30" width="30" /></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
